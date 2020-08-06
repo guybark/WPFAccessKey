@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPFAccessKey.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAccessKey"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Todo: Localize everything. -->
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Label Name="GardenBirdsComboBoxLabel" 
+                        Target="{Binding ElementName=GardenBirdsComboBox}" 
+                        Content="_Garden Birds" />
+                <ComboBox Name="GardenBirdsComboBox"
+                        AutomationProperties.LabeledBy="{Binding ElementName=GardenBirdsComboBoxLabel}"
+                        SelectedIndex="0">
+                    <ComboBoxItem Content="Towhee" />
+                    <ComboBoxItem Content="Chickadee" />
+                    <ComboBoxItem Content="Grosbeak" />
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Label Name="NisquallyBirdsComboBoxLabel" 
+                        Target="{Binding ElementName=NisquallyBirdsComboBox}" 
+                        Content="_Nisqually Wildlife Refuge Birds" />
+                <ComboBox Name="NisquallyBirdsComboBox"
+                        AutomationProperties.LabeledBy="{Binding ElementName=NisquallyBirdsComboBoxLabel}"
+                        SelectedIndex="0">
+                    <ComboBoxItem Content="Heron" />
+                    <ComboBoxItem Content="Eagle" />
+                    <ComboBoxItem Content="Kingfisher" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
